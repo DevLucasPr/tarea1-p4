@@ -25,10 +25,12 @@ public:
     void setCodigoReserva(string codigoReserva);
     void setDescripcion(string descripcion);
     void setPrecioBase(int precioBase);
+    // void setFecha(DTFecha fecha);
 
     string getCodigoReserva();
     string getDescripcion();
     int getPrecioBase();
+    // DTFecha getFecha();
 
     virtual ~Experiencia() = 0;
 };

@@ -12,7 +12,10 @@ Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBas
     this->codigoReserva = codigoReserva;
     this->descripcion = descripcion;
     this->precioBase = precioBase;
+    // this->fecha = fecha;
 }
+
+float calcularCosto(){};
 
 void Experiencia::setCodigoReserva(string codigoReserva)
 {
@@ -29,6 +32,14 @@ void Experiencia::setPrecioBase(int precioBase)
     this->precioBase = precioBase;
 }
 
+/*void Experiencia::setFecha(DTFecha fecha){
+    this->fecha = fecha;
+}*/
+
+/*void Experiencia::getDT(){
+    return this->DT;    
+}*/
+
 string Experiencia::getCodigoReserva()
 {
     return this->codigoReserva;
@@ -41,5 +52,9 @@ int Experiencia::getPrecioBase()
 {
     return this->precioBase;
 }
+
+/*DTFecha Experiencia::getFecha(){
+    return this->fecha;
+}*/
 
 Experiencia::~Experiencia() {};
