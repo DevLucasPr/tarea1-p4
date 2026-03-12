@@ -35,7 +35,7 @@ int Alojamiento::getCantNoches(){
 
 float Alojamiento::calcularCosto(){
     float costo;
-    costo = (this->getPrecioBase*() * this->getCantNoches());
+    costo = (this->getPrecioBase() * this->getCantNoches());
     if (this->getTipoRegimen() == AllInclusive){
         costo = (costo + (this->getCantNoches() * 10));
     }
