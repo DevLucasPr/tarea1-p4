@@ -14,7 +14,7 @@ void Alojamiento::setHotel(string hotel){
 };
 
 string Alojamiento::getHotel(){
-    return hotel;
+    return this->hotel;
 };
 
 void Alojamiento::setTipoRegimen(TipoRegimen regimen){
@@ -22,7 +22,7 @@ void Alojamiento::setTipoRegimen(TipoRegimen regimen){
 };
 
 string Alojamiento::getTipoRegimen(){
-    return regimen;
+    return this->regimen;
 };
 
 void Alojamiento::setCantNoches(int cantNoches){
@@ -30,7 +30,7 @@ void Alojamiento::setCantNoches(int cantNoches){
 };
 
 int Alojamiento::getCantNoches(){
-    return cantNoches;
+    return this->cantNoches;
 };
 
 float Alojamiento::calcularCosto(){
