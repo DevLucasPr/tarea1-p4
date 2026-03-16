@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBase /*,DTFecha fecha*/)
+Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBase ,DTFecha fecha)
 {
     this->codigoReserva = codigoReserva;
     this->descripcion = descripcion;
