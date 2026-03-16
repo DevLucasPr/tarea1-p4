@@ -1,28 +1,28 @@
 #ifndef ALOJAMIENTO
 #define ALOJAMIENTO
 #include <string>
+#include "Alojamiento.h"
 #include "Experiencia.h"
 #include "TipoRegimen.h"
 using namespace std;
 
-class Alojamiento : public Experiencia {
+class Alojamiento : public Experiencia
+{
 private:
-
     string hotel;
     TipoRegimen regimen;
     int cantNoches;
 
 public:
+    Alojamiento(string hotel, TipoRegimen regimen, int cantNoches);
 
-    Alojamiento(string hotel, TipoRegimen regimen, int cantNoches); 
-
-    void setHotel(string hotel); 
+    void setHotel(string hotel);
     string getHotel();
 
-    void setTipoRegimen(TipoRegimen regimen); 
+    void setTipoRegimen(TipoRegimen regimen);
     TipoRegimen getTipoRegimen();
 
-    void setCantNoches(int cantNoches); 
+    void setCantNoches(int cantNoches);
     int getCantNoches();
 
     float calcularCosto();
