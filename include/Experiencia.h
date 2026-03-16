@@ -19,7 +19,7 @@ private:
     set<Turista *> turistas;
 
 public:
-    Experiencia(string codigoReserva, string descripcion, int precioBase);
+    Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha);
 
     DTExpe getDT() : virtual float calcularCosto() = 0;
 
