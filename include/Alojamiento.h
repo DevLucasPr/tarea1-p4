@@ -2,6 +2,7 @@
 #define ALOJAMIENTO
 #include <string>
 #include "../include/Experiencia.h"
+#include "../include/DTFecha.h"
 #include "../include/TipoRegimen.h"
 using namespace std;
 
@@ -14,7 +15,7 @@ private:
 
 public:
 
-    Alojamiento(string hotel, TipoRegimen regimen, int cantNoches); 
+    Alojamiento(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string hotel, TipoRegimen regimen, int cantNoches); 
 
     void setHotel(string hotel); 
     string getHotel();

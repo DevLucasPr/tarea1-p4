@@ -1,10 +1,11 @@
 #include <string>
 #include "../include/Experiencia.h"
+#include "../include/DTFecha.h"
 #include "../include/Alojamiento.h"
 #include "../include/TipoRegimen.h"
 using namespace std;
 
-Alojamiento::Alojamiento(string hotel, TipoRegimen regimen, int cantNoches)::Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha) {
+Alojamiento::Alojamiento(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string hotel, TipoRegimen regimen, int cantNoches)::Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha) {
     this->hotel = hotel;
     this->regimen = regimen;
     this->cantNoches = cantNoches;
