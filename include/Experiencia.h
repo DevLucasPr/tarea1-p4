@@ -16,19 +16,27 @@ private:
     string descripcion;
     int precioBase;
     // DTFecha fecha;
-    // set<Turista*> turista;
+    // set<Turista*> turistas;
 public:
     Experiencia(string codigoReserva, string descripcion, int precioBase);
+
     // DTExpe getDT():
     virtual float calcularCosto() = 0;
+
+    /*
+    void agregarTurista(Turista* turista);
+    void eliminarTurista(Turista* turista);
+    */
 
     void setCodigoReserva(string codigoReserva);
     void setDescripcion(string descripcion);
     void setPrecioBase(int precioBase);
+    // void setFecha(DTFecha fecha);
 
     string getCodigoReserva();
     string getDescripcion();
     int getPrecioBase();
+    // DTFecha getFecha();
 
     virtual ~Experiencia() = 0;
 };
