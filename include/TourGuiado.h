@@ -11,7 +11,7 @@ class TourGuiado::public Experiencia{
         string Agencia;
         set<string> lugaresVisitados;
     public:
-        TourGuiado(string agencia, set<string> lugaresVisitados);
+        TourGuiado(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string agencia, set<string> lugaresVisitados);
         string getAgencia();
         set<string> getlugaresVisitados();
         float calcularCosto();
