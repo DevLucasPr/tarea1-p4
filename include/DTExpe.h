@@ -11,7 +11,7 @@ class DTExpe{
         DTFecha fecha;
         set<string> turistas;
     public:
-        DTExpe(string,string, DTFecha, set<string>);
+        DTExpe(string codigoReserva,string descripción, DTFecha fecha, set<string> turistas);
         string getCodigoReserva();
         string getdescripcion();
         DTFecha getFecha();
