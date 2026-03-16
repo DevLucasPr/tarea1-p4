@@ -4,9 +4,9 @@
 
 class DTFecha{
     private:
-        int dia, mes,anio;
+        int dia, mes, anio;
     public:
-        DTFecha(int, int, int);
+        DTFecha(int dia, int mes, int anio);
         int getDia();
         int getMes();
         int getAnio();
