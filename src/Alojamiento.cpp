@@ -1,6 +1,7 @@
 #include <string>
 #include "Alojamiento.h"
 #include "Experiencia.h"
+#include "Alojamiento.h"
 #include "TipoRegimen.h"
 using namespace std;
 
