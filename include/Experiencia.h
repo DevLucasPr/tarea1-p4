@@ -36,6 +36,7 @@ public:
     string getDescripcion();
     int getPrecioBase();
     DTFecha getFecha();
+    set<Turista *> getTuristas();
 
     virtual ~Experiencia() = 0;
 };

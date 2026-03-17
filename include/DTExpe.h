@@ -11,15 +11,14 @@ class DTExpe
 private:
     string codigoReserva, descripcion;
     DTFecha fecha;
-    set<string> turistas;
+    set<string> nombreTurista;
 
 public:
-    DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> turistas);
+    DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> nombreTurista);
     string getCodigoReserva();
     string getdescripcion();
     DTFecha getFecha();
-    set<string> getTuristas();
-    int getCantTuristas();
+    set<string> getNombreTurista();
 };
 
 #endif

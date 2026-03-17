@@ -1,7 +1,7 @@
-#include "../include/DTFecha.h"
-#include "../include/DTExpe.h"
-#include "../include/Experiencia.h"
-#include "../include/Turista.h"
+#include "DTFecha.h"
+#include "DTExpe.h"
+#include "Experiencia.h"
+#include "Turista.h"
 #include <set>
 #include <string>
 #include <iostream>
@@ -81,4 +81,9 @@ int Experiencia::getPrecioBase()
 DTFecha Experiencia::getFecha()
 {
     return this->fecha;
+}
+
+set<Turista *> Experiencia::getTuristas()
+{
+    return this->turistas;
 }

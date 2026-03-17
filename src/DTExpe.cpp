@@ -1,11 +1,12 @@
 #include "DTExpe.h"
+#include "DTFecha.h"
 
-DTExpe::DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> turistas)
+DTExpe::DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> nombreTurista)
 {
     this->codigoReserva = codigoReserva;
     this->descripcion = descripcion;
     this->fecha = fecha;
-    this->turistas = turistas;
+    this->nombreTurista = nombreTurista;
 }
 
 string DTExpe::getCodigoReserva()
@@ -20,12 +21,7 @@ DTFecha DTExpe::getFecha()
 {
     return this->fecha;
 }
-set<string> DTExpe::getTuristas()
+set<string> DTExpe::getNombreTurista()
 {
-    return this->turistas;
-}
-int DTExpe::getCantTuristas()
-{
-    int cantTuristas = getTuristas().size();
-    return cantTuristas;
+    return this->nombreTurista;
 }

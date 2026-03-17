@@ -8,6 +8,7 @@ private:
     int dia, mes, anio;
 
 public:
+    DTFecha();
     DTFecha(int dia, int mes, int anio);
     int getDia();
     int getMes();
