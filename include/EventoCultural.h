@@ -2,7 +2,7 @@
 #define EVENTOCULTURAL
 #include "../include/Experiencia.h"
 #include "../include/DTFecha.h"
-#include "../include/EvenetoCultural.h"
+#include "../include/DTExpe.h"
 
 #include <string>
 using namespace std;

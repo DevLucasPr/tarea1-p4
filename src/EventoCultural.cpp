@@ -32,10 +32,10 @@ bool EventoCultural::getUsoCupon()
 float EventoCultural::calcularCosto()
 {
     float costo;
-    costo = (this->getPrecioBase() * this->getTuristas().size());
+    costo = (this->precioBase * this->turistas.size());
     if (this->usoCupon)
         {
-            costo = costo - (this->getTuristas().size() * 5);
+            costo = costo - (this->turistas.size() * 5);
         };
     return costo;
 };
