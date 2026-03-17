@@ -2,61 +2,72 @@
 #include "Experiencia.h"
 #include "DTFecha.h"
 
-
-Turista::Turista(std::string ci, std::string nombre, std::string email) {
+Turista::Turista(string ci, string nombre, string email)
+{
     this->ci = ci;
     this->nombre = nombre;
     this->email = email;
 }
 
-std::string Turista::getCi() {
+string Turista::getCi()
+{
     return ci;
 }
 
-std::string Turista::getNombre() {
+string Turista::getNombre()
+{
     return nombre;
 }
 
-std::string Turista::getEmail() {
+string Turista::getEmail()
+{
     return email;
 }
 
-void Turista::setCi(std::string ci){
+void Turista::setCi(string ci)
+{
     this->ci = ci;
 }
 
-void Turista::setNombre(std::string nombre){
+void Turista::setNombre(string nombre)
+{
     this->nombre = nombre;
 }
 
-void Turista::setEmail(std::string email){
+void Turista::setEmail(string email)
+{
     this->email = email;
 }
 
-void Turista::agregarExperiencia(Experiencia* exp) {
+void Turista::agregarExperiencia(Experiencia *exp)
+{
     experiencias.push_back(exp);
 }
 
-std::string Turista::toString() {
+string Turista::toString()
+{
     return ci + "->" + nombre + "/" + email;
 }
 
-std::list<std::string> Turista::listarExperiencias(DTFecha desde, float min, float max) {
+list<string> Turista::listarExperiencias(DTFecha desde, float min, float max)
+{
 
-    std::list<std::string> resultado;
+    list<string> resultado;
 
-    for(std::list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); ++it) {
+    for (list<Experiencia *>::iterator it = experiencias.begin(); it != experiencias.end(); ++it)
+    {
 
-        Experiencia* exp = *it;
+        Experiencia *exp = *it;
 
-        if(exp->getFecha() > desde) {
+        if (exp->getFecha() > desde)
+        {
 
             float costo = exp->calcularCosto();
 
-            if(costo >= min && costo <= max) {
+            if (costo >= min && costo <= max)
+            {
                 resultado.push_back(exp->getCodigoReserva());
             }
-
         }
     }
 

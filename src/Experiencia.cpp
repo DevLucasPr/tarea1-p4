@@ -7,15 +7,13 @@
 #include <iostream>
 using namespace std;
 
-Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBase ,DTFecha fecha)
+Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha)
 {
     this->codigoReserva = codigoReserva;
     this->descripcion = descripcion;
     this->precioBase = precioBase;
     this->fecha = fecha;
 }
-
-:DTExpe(string codigoReserva,string descripcion,DTFecha fecha,set<string> turistas
 
 DTExpe Experiencia::getDT()
 {
@@ -32,12 +30,12 @@ DTExpe Experiencia::getDT()
     return DTExpe(this->codigoReserva, this->descripcion, this->fecha, tur);
 }
 
-void Experiencia::agregarTurista(Turista* turista)
+void Experiencia::agregarTurista(Turista *turista)
 {
-    this->turistas, insert(turista);
+    this->turistas.insert(turista);
 }
 
-void Experiencia::eliminarTurista(Turista* turista)
+void Experiencia::eliminarTurista(Turista *turista)
 {
     if (this->turistas.find(turista) != turistas.end())
     {
@@ -60,7 +58,8 @@ void Experiencia::setPrecioBase(int precioBase)
     this->precioBase = precioBase;
 }
 
-void Experiencia::setFecha(DTFecha fecha) {
+void Experiencia::setFecha(DTFecha fecha)
+{
     this->fecha = fecha;
 }
 
@@ -79,6 +78,7 @@ int Experiencia::getPrecioBase()
     return this->precioBase;
 }
 
-DTFecha Experiencia::getFecha() {
+DTFecha Experiencia::getFecha()
+{
     return this->fecha;
 }
