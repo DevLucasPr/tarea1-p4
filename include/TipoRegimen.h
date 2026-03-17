@@ -1,7 +1,8 @@
 #ifndef TIPOREGIMEN
 #define TIPOREGIMEN
 
-enum TipoRegimen {
+enum TipoRegimen
+{
     AllInclusive,
     MediaPension
 };

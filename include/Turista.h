@@ -3,36 +3,35 @@
 
 #include <string>
 #include <list>
+#include "Experiencia.h"
+#include "DTFecha.h"
+using namespace std;
 
-class Experiencia;
-class DTFecha;
-
-class Turista { 
+class Turista
+{
 
 private:
-    std::string ci;
-    std::string nombre;
-    std::string email;
-    std::list<Experiencia*> experiencias;
+    string ci;
+    string nombre;
+    string email;
+    list<Experiencia *> experiencias;
 
-public: 
-    Turista(std::string ci, std::string nombre, std::string email);
+public:
+    Turista(string ci, string nombre, string email);
 
-    std::string getCi();
-    std::string getNombre();
-    std::string getEmail();
+    string getCi();
+    string getNombre();
+    string getEmail();
 
-    void setCi(std::string ci);
-    void setNombre(std::string nombre);
-    void setEmail(std::string email);
+    void setCi(string ci);
+    void setNombre(string nombre);
+    void setEmail(string email);
 
-    void agregarExperiencia(Experiencia* exp);
+    void agregarExperiencia(Experiencia *exp);
 
-    std::string toString();
+    string toString();
 
-    std::list<std::string> listarExperiencias(DTFecha desde, float min, float max);
+    list<string> listarExperiencias(DTFecha desde, float min, float max);
 };
 
 #endif
-
-

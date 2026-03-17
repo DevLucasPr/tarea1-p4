@@ -12,7 +12,7 @@ std::map<std::string, Turista*> map_turistas;
 void coleccion_guardarExperiencia(Experiencia* exp){
 	experiencias.push_back(exp);
 	std::pair<std::string, Experiencia*> entry(exp->getCodigoReserva(), exp);
-    map_experiencias.insert(entry);
+	map_experiencias.insert(entry);
 }
 void coleccion_eliminarExperiencia(Experiencia* exp){
 	experiencias.remove(exp);
@@ -22,7 +22,7 @@ void coleccion_eliminarExperiencia(Experiencia* exp){
 void coleccion_guardarTurista(Turista* tur){
 	turistas.push_back(tur);
 	std::pair<std::string, Turista*> entry(tur->getCi(), tur);
-    map_turistas.insert(entry);
+	map_turistas.insert(entry);
 }
 
 Turista* coleccion_getTurista(std::string ci){
