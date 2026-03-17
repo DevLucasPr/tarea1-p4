@@ -2,6 +2,7 @@
 #include "../include/Experiencia.h"
 #include "../include/DTFecha.h"
 #include "../include/EventoCultural.h"
+#include "../include/DTExpe.h"
 using namespace std;
 
 
@@ -26,5 +27,14 @@ void EventoCultural::setUsoCupon(bool usoCupon) {
 
 bool EventoCultural::getUsoCupon() {
     return this->usoCupon;
+};
+
+float EventoCultural::calcularCosto(){
+    float costo;
+    costo = (this->getPrecioBase() * this->getCantTuristas());
+    if this->usoCupon {
+        costo = costo - (this->getCantTuristas() * 5);
+    }
+    return costo;
 };
 
