@@ -14,7 +14,7 @@ EventoCultural::EventoCultural(string codigoReserva, string descripcion, int pre
 
 void EventoCultural::setUbicacion(string ubicacion)
 {
-    this->ubicacion = ubicacionM;
+    this->ubicacion = ubicacion;
 };
 
 string EventoCultural::getUbicacion()
