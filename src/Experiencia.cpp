@@ -1,11 +1,4 @@
-#include "DTFecha.h"
-#include "DTExpe.h"
-#include "Experiencia.h"
-#include "Turista.h"
-#include <set>
-#include <string>
-#include <iostream>
-using namespace std;
+#include "../include/Experiencia.h"
 
 Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha)
 {

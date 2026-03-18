@@ -1,6 +1,4 @@
-#include "TourGuiado.h"
-#include "Experiencia.h"
-#include "DTExpe.h"
+#include "../include/TourGuiado.h"
 
 TourGuiado::TourGuiado(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string agencia, set<string> lugaresVisitados) : Experiencia(codigoReserva, descripcion, precioBase, fecha)
 {

@@ -1,5 +1,4 @@
-#include "DTExpe.h"
-#include "DTFecha.h"
+#include "../include/DTExpe.h"
 
 DTExpe::DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> nombreTurista)
 {
