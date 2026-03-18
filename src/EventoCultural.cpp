@@ -1,20 +1,14 @@
-#include <string>
-#include "../include/Experiencia.h"
-#include "../include/DTFecha.h"
 #include "../include/EventoCultural.h"
-#include "../include/DTExpe.h"
-using namespace std;
 
-EventoCultural::EventoCultural(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string ubicacion, bool usoCupon)::Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha)
+EventoCultural::EventoCultural(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string ubicacion, bool usoCupon):Experiencia(codigoReserva, descripcion, precioBase, fecha)
 {
-
     this->ubicacion = ubicacion;
     this->usoCupon = usoCupon;
 };
 
 void EventoCultural::setUbicacion(string ubicacion)
 {
-    this->ubicacion = ubicacionM;
+    this->ubicacion = ubicacion;
 };
 
 string EventoCultural::getUbicacion()
@@ -35,11 +29,10 @@ bool EventoCultural::getUsoCupon()
 float EventoCultural::calcularCosto()
 {
     float costo;
-    costo = (this->getPrecioBase() * this->getCantTuristas());
-    if
-        this->usoCupon
+    costo = (this->getPrecioBase() * this->getTuristas().size());
+    if (this->usoCupon)
         {
-            costo = costo - (this->getCantTuristas() * 5);
+            costo = costo - (this->getTuristas().size() * 5);
         }
     return costo;
 };

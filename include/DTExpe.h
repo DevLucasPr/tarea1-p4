@@ -2,6 +2,7 @@
 #define _DTEXPE_H_
 
 #include "DTFecha.h"
+
 #include <set>
 #include <string>
 using namespace std;
@@ -15,6 +16,7 @@ private:
 
 public:
     DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> nombreTurista);
+
     string getCodigoReserva();
     string getdescripcion();
     DTFecha getFecha();
