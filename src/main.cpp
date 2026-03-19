@@ -111,7 +111,11 @@ void parte_d()
 // 1.535.442-0, Karen Santos, karen.s89@internet.uy
 void parte_e()
 {
-
+	Turista* turista1 = new Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	coleccion_guardarTurista(turista1);
+	
+	Turista* turista2 = new Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
+	coleccion_guardarTurista(turista2);
 }
 
 //Imprimir en consola el resultado de ejecutar la operación toString para cada uno
@@ -154,7 +158,7 @@ void parte_i()
 // string por línea)
 void parte_j()
 {
-
+	
 }
 
 // Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
@@ -162,7 +166,7 @@ void parte_j()
 // código que la parte d)
 void parte_k()
 {
-
+	
 } 
 
 void cleanUp()
