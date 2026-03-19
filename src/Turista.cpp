@@ -1,6 +1,4 @@
 #include "Turista.h"
-#include "Experiencia.h"
-#include "DTFecha.h"
 
 Turista::Turista(string ci, string nombre, string email)
 {
@@ -9,17 +7,17 @@ Turista::Turista(string ci, string nombre, string email)
     this->email = email;
 }
 
-string Turista::getCi()
+string Turista::getCi() const
 {
     return ci;
 }
 
-string Turista::getNombre()
+string Turista::getNombre() const
 {
     return nombre;
 }
 
-string Turista::getEmail()
+string Turista::getEmail() const
 {
     return email;
 }

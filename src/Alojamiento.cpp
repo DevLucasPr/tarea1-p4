@@ -1,6 +1,6 @@
 #include "../include/Alojamiento.h"
 
-Alojamiento::Alojamiento(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string hotel, TipoRegimen regimen, int cantNoches):Experiencia(codigoReserva, descripcion, precioBase, fecha)
+Alojamiento::Alojamiento(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string hotel, TipoRegimen regimen, int cantNoches) : Experiencia(codigoReserva, descripcion, precioBase, fecha)
 {
     this->hotel = hotel;
     this->regimen = regimen;
@@ -10,40 +10,40 @@ Alojamiento::Alojamiento(string codigoReserva, string descripcion, int precioBas
 void Alojamiento::setHotel(string hotel)
 {
     this->hotel = hotel;
-};
-
-string Alojamiento::getHotel()
-{
-    return this->hotel;
-};
+}
 
 void Alojamiento::setTipoRegimen(TipoRegimen regimen)
 {
     this->regimen = regimen;
-};
-
-TipoRegimen Alojamiento::getTipoRegimen()
-{
-    return this->regimen;
-};
+}
 
 void Alojamiento::setCantNoches(int cantNoches)
 {
     this->cantNoches = cantNoches;
-};
+}
 
-int Alojamiento::getCantNoches()
+string Alojamiento::getHotel() const
+{
+    return this->hotel;
+}
+
+TipoRegimen Alojamiento::getTipoRegimen() const
+{
+    return this->regimen;
+}
+
+int Alojamiento::getCantNoches() const
 {
     return this->cantNoches;
-};
+}
 
 float Alojamiento::calcularCosto()
 {
-    float costo;
-    costo = (this->getPrecioBase() * this->getCantNoches());
+    int precioBase = this->getPrecioBase();
+    int noches = this->getCantNoches();
     if (this->getTipoRegimen() == AllInclusive)
     {
-        costo = (costo + (this->getCantNoches() * 10));
+        return (precioBase * noches) + (noches * 10);
     }
-    return costo;
-};
+    return precioBase * noches;
+}

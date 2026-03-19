@@ -1,8 +1,8 @@
 #ifndef TURISTA_H
 #define TURISTA_H
 
-#include "Experiencia.h"
-#include "DTFecha.h"
+#include "../include/Experiencia.h"
+#include "../include/DTFecha.h"
 
 #include <list>
 #include <string>
@@ -20,9 +20,9 @@ private:
 public:
     Turista(string ci, string nombre, string email);
 
-    string getCi();
-    string getNombre();
-    string getEmail();
+    string getCi() const;
+    string getNombre() const;
+    string getEmail() const;
 
     void setCi(string ci);
     void setNombre(string nombre);

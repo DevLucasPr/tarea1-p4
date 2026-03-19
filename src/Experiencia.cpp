@@ -56,27 +56,27 @@ void Experiencia::setFecha(DTFecha fecha)
     this->fecha = fecha;
 }
 
-string Experiencia::getCodigoReserva()
+string Experiencia::getCodigoReserva() const
 {
     return this->codigoReserva;
 }
 
-string Experiencia::getDescripcion()
+string Experiencia::getDescripcion() const
 {
     return this->descripcion;
 }
 
-int Experiencia::getPrecioBase()
+int Experiencia::getPrecioBase() const
 {
     return this->precioBase;
 }
 
-DTFecha Experiencia::getFecha()
+DTFecha Experiencia::getFecha() const
 {
     return this->fecha;
 }
 
-set<Turista *> Experiencia::getTuristas()
+set<Turista *> Experiencia::getTuristas() const
 {
     return this->turistas;
 }

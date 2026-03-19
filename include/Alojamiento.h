@@ -19,13 +19,12 @@ public:
     Alojamiento(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string hotel, TipoRegimen regimen, int cantNoches);
 
     void setHotel(string hotel);
-    string getHotel();
-
     void setTipoRegimen(TipoRegimen regimen);
-    TipoRegimen getTipoRegimen();
-
     void setCantNoches(int cantNoches);
-    int getCantNoches();
+
+    string getHotel() const;
+    TipoRegimen getTipoRegimen() const;
+    int getCantNoches() const;
 
     float calcularCosto();
 };
