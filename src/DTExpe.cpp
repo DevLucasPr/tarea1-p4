@@ -23,7 +23,7 @@ DTFecha DTExpe::getFecha() const
     return this->fecha;
 }
 
-const set<string> &DTExpe::getNombreTurista() const
+set<string> DTExpe::getNombreTurista() const
 {
     return this->nombreTurista;
 }
