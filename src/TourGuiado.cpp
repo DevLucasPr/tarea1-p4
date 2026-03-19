@@ -6,6 +6,16 @@ TourGuiado::TourGuiado(string codigoReserva, string descripcion, int precioBase,
     this->lugaresVisitados = lugaresVisitados;
 }
 
+void TourGuiado::setAgencia(string agencia)
+{
+    this->agencia = agencia;
+}
+
+void TourGuiado::setLugaresVisitados(set<string> lugaresVisitados)
+{
+    this->lugaresVisitados = lugaresVisitados;
+}
+
 string TourGuiado::getAgencia() const
 {
     return this->agencia;
