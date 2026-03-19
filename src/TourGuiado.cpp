@@ -5,17 +5,21 @@ TourGuiado::TourGuiado(string codigoReserva, string descripcion, int precioBase,
     this->agencia = agencia;
     this->lugaresVisitados = lugaresVisitados;
 }
-string TourGuiado::getAgencia()
+
+string TourGuiado::getAgencia() const
 {
     return this->agencia;
 }
-set<string> TourGuiado::getLugaresVisitados()
+
+set<string> TourGuiado::getLugaresVisitados() const
 {
     return this->lugaresVisitados;
 }
+
 float TourGuiado::calcularCosto()
 {
-    float cantLugaresVisitados;
-    cantLugaresVisitados = this->lugaresVisitados.size();
-    float costo = this->getPrecioBase() * 2 * this->getTuristas().size() * cantLugaresVisitados;
+    int precioBase = this->getPrecioBase();
+    int cantidadTuristas = this->getTuristas().size();
+    int cantidadLugares = this->lugaresVisitados.size();
+    return (precioBase * 2 * cantidadTuristas * cantidadLugares);
 }

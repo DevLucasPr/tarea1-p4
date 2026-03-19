@@ -1,9 +1,9 @@
 #ifndef EXPERIENCIA
 #define EXPERIENCIA
 
-#include "DTFecha.h"
-#include "DTExpe.h"
-#include "Turista.h"
+#include "../include/DTFecha.h"
+#include "../include/DTExpe.h"
+#include "../include/Turista.h"
 
 #include <set>
 #include <string>
@@ -32,11 +32,11 @@ public:
     void setPrecioBase(int precioBase);
     void setFecha(DTFecha fecha);
 
-    string getCodigoReserva();
-    string getDescripcion();
-    int getPrecioBase();
-    DTFecha getFecha();
-    set<Turista *> getTuristas();
+    string getCodigoReserva() const;
+    string getDescripcion() const;
+    int getPrecioBase() const;
+    DTFecha getFecha() const;
+    set<Turista *> getTuristas() const;
 
     virtual ~Experiencia() = 0;
 };

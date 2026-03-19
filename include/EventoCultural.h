@@ -17,10 +17,10 @@ public:
     EventoCultural(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string ubicacion, bool usoCupon);
 
     void setUbicacion(string ubicacion);
-    string getUbicacion();
-
     void setUsoCupon(bool usoCupon);
-    bool getUsoCupon();
+
+    string getUbicacion() const;
+    bool getUsoCupon() const;
 
     float calcularCosto();
 };

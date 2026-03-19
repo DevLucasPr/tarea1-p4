@@ -14,16 +14,17 @@ DTFecha::DTFecha(int d, int m, int a)
     this->anio = a;
 }
 
-int DTFecha::getDia()
+int DTFecha::getDia() const
 {
     return this->dia;
 }
 
-int DTFecha::getMes()
+int DTFecha::getMes() const
 {
     return this->mes;
 }
-int DTFecha::getAnio()
+
+int DTFecha::getAnio() const
 {
     return this->anio;
 }
