@@ -21,7 +21,7 @@ public:
     string getCodigoReserva() const;
     string getDescripcion() const;
     DTFecha getFecha() const;
-    const set<string> &getNombreTurista() const;
+    set<string> getNombreTurista() const;
 };
 
 ostream &operator<<(ostream &os, const DTExpe &dt); // Sobrecarga del operador de inserción para imprimir el contenido de DTExpe
