@@ -1,4 +1,4 @@
-#include "Turista.h"
+#include "../include/Turista.h"
 
 Turista::Turista(string ci, string nombre, string email)
 {
