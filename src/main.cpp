@@ -113,83 +113,78 @@ void parte_e()
 //  de los objetos Turista creados
 void parte_f()
 {
-	list<Turista *>::const_iterator iteradorTur;
-	for (iteradorTur = turistas.begin(); iteradorTur != turistas.end(); ++iteradorTur)
-	{
-		Turista *turista = *iteradorTur;
-		cout << turista->toString() << endl;
-	}
+}
 
-	// Registrar las siguientes relaciones entre turistas y experiencias (creando links de la
-	// relación en ambas direcciones):
-	// 4.951.278-9 (Vanesa Castro) -> ALX5489 (Hotel moderno)
-	// 4.951.278-9 (Vanesa Castro) -> ALJ4789 (Todas las habitaciones con vista al mar)
-	// 4.951.278-9 (Vanesa Castro) -> TGR3257 (Puntos emblematicos)
-	// 4.951.278-9 (Vanesa Castro) -> ECP1346 (Danza en el Solis)
-	// 1.535.442-0 (Karen Santos) -> TGO4657 (Plazas de Montevideo)
-	// 1.535.442-0 (Karen Santos) -> TGR3257 (Puntos emblematicos)
-	void parte_g()
-	{
-	}
+// Registrar las siguientes relaciones entre turistas y experiencias (creando links de la
+// relación en ambas direcciones):
+// 4.951.278-9 (Vanesa Castro) -> ALX5489 (Hotel moderno)
+// 4.951.278-9 (Vanesa Castro) -> ALJ4789 (Todas las habitaciones con vista al mar)
+// 4.951.278-9 (Vanesa Castro) -> TGR3257 (Puntos emblematicos)
+// 4.951.278-9 (Vanesa Castro) -> ECP1346 (Danza en el Solis)
+// 1.535.442-0 (Karen Santos) -> TGO4657 (Plazas de Montevideo)
+// 1.535.442-0 (Karen Santos) -> TGR3257 (Puntos emblematicos)
+void parte_g()
+{
+}
 
-	// Invocar la operación listarExperiencias(10/12/2023, 0, 1000) para
-	//  la turista 4.951.278-9 (Vanesa Castro) e imprimir el resultado en consola (un string
-	//  por línea)
-	void parte_h()
-	{
-	}
+// Invocar la operación listarExperiencias(10/12/2023, 0, 1000) para
+//  la turista 4.951.278-9 (Vanesa Castro) e imprimir el resultado en consola (un string
+//  por línea)
+void parte_h()
+{
+}
 
-	// Ejecutar la eliminación del objeto TGR3257(Puntos emblematicos) de la clase
-	// Experiencia
-	void parte_i()
-	{
-	}
+// Ejecutar la eliminación del objeto TGR3257(Puntos emblematicos) de la clase
+// Experiencia
+void parte_i()
+{
+}
 
-	// Invocar la operación listarExperiencias(10/10/2020, 0, 1000)
-	// para la turista 1.535.442-0 (Karen Santos) e imprimir el resultado en consola (un
-	// string por línea)
-	void parte_j()
-	{
-	}
+// Invocar la operación listarExperiencias(10/10/2020, 0, 1000)
+// para la turista 1.535.442-0 (Karen Santos) e imprimir el resultado en consola (un
+// string por línea)
+void parte_j()
+{
+}
 
-	// Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
-	// operación getDT() para cada uno de los objetos Experiencias creados (mismo
-	// código que la parte d)
-	void parte_k()
-	{
-	}
+// Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
+// operación getDT() para cada uno de los objetos Experiencias creados (mismo
+// código que la parte d)
+void parte_k()
+{
+}
 
-	void cleanUp()
-	{
-	}
+void cleanUp()
+{
+}
 
-	int main()
-	{
-		std::cout << "parte_a" << std::endl;
-		parte_a();
-		std::cout << "parte_b" << std::endl;
-		parte_b();
-		std::cout << "parte_c" << std::endl;
-		parte_c();
-		std::cout << "parte_d" << std::endl;
-		parte_d();
-		std::cout << "parte_e" << std::endl;
-		parte_e();
-		std::cout << "parte_f" << std::endl;
-		parte_f();
-		std::cout << "parte_g" << std::endl;
-		parte_g();
-		std::cout << "parte_h" << std::endl;
-		parte_h();
-		std::cout << "parte_i" << std::endl;
-		parte_i();
-		std::cout << "parte_j" << std::endl;
-		parte_j();
-		std::cout << "parte_k" << std::endl;
-		parte_k();
-		std::cout << "cleanUp" << std::endl;
-		cleanUp();
-		std::cout << "fin" << std::endl;
+int main()
+{
+	std::cout << "parte_a" << std::endl;
+	parte_a();
+	std::cout << "parte_b" << std::endl;
+	parte_b();
+	std::cout << "parte_c" << std::endl;
+	parte_c();
+	std::cout << "parte_d" << std::endl;
+	parte_d();
+	std::cout << "parte_e" << std::endl;
+	parte_e();
+	std::cout << "parte_f" << std::endl;
+	parte_f();
+	std::cout << "parte_g" << std::endl;
+	parte_g();
+	std::cout << "parte_h" << std::endl;
+	parte_h();
+	std::cout << "parte_i" << std::endl;
+	parte_i();
+	std::cout << "parte_j" << std::endl;
+	parte_j();
+	std::cout << "parte_k" << std::endl;
+	parte_k();
+	std::cout << "cleanUp" << std::endl;
+	cleanUp();
+	std::cout << "fin" << std::endl;
 
-		return 0;
-	}
+	return 0;
+}
