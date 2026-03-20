@@ -134,7 +134,7 @@ void parte_g()
 //  la turista 4.951.278-9 (Vanesa Castro) e imprimir el resultado en consola (un string
 //  por línea)
 void parte_h(){
-	Turista* tur =coleccion_getTurista(49512789);
+	Turista* tur =coleccion_getTurista(4.951.278-9);
 	list<string> imprimirExperiencias = tur->listarExperiencias(10/12/2023,0,1000);
 	for (list<string>::iterator it=imprimirExperiencias.begin();it != imprimirExperiencias.end();++it){
 		string codExp= *it;
