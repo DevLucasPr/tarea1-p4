@@ -116,6 +116,12 @@ void parte_e()
 //  de los objetos Turista creados
 void parte_f()
 {
+	list<Turista *>::const_iterator iteradorTurista;
+	for (iteradorTurista = turistas.begin(); iteradorTurista != turistas.end(); ++iteradorTurista)
+	{
+		Turista *turista = *iteradorTurista;
+		cout << turista->toString() << endl;
+	}
 }
 
 // Registrar las siguientes relaciones entre turistas y experiencias (creando links de la
@@ -128,6 +134,35 @@ void parte_f()
 // 1.535.442-0 (Karen Santos) -> TGR3257 (Puntos emblematicos)
 void parte_g()
 {
+	Turista *vanesa = coleccion_getTurista("49512789");
+	Turista *karen = coleccion_getTurista("15354420");
+
+	Experiencia *expHotelModerno = coleccion_getExperiencia("ALX5489");
+	Experiencia *expHabVistaMar = coleccion_getExperiencia("ALJ4789");
+	Experiencia *expPuntosEmb = coleccion_getExperiencia("TGR3257");
+	Experiencia *expDanzaSolis = coleccion_getExperiencia("ECP1346");
+	Experiencia *expPlazasMvd = coleccion_getExperiencia("TGO4657");
+
+	// Experiencias Vanesa
+	expHotelModerno->agregarTurista(vanesa);
+	vanesa->agregarExperiencia(expHotelModerno);
+
+	expHabVistaMar->agregarTurista(vanesa);
+	vanesa->agregarExperiencia(expHabVistaMar);
+
+	expPuntosEmb->agregarTurista(vanesa);
+	vanesa->agregarExperiencia(expPuntosEmb);
+
+	expDanzaSolis->agregarTurista(vanesa);
+	vanesa->agregarExperiencia(expDanzaSolis);
+
+	// Experiencias Karen
+
+	expPuntosEmb->agregarTurista(karen);
+	karen->agregarExperiencia(expPuntosEmb);
+
+	expPlazasMvd->agregarTurista(karen);
+	karen->agregarExperiencia(expPlazasMvd);
 }
 
 // Invocar la operación listarExperiencias(10/12/2023, 0, 1000) para
