@@ -158,7 +158,12 @@ void parte_i()
 // string por línea)
 void parte_j()
 {
-	
+	Turista* turista = coleccion_getTurista("1.535.442-0");
+	list<string> experiencias = turista->listarExperiencias(DTFecha(10, 10, 2020), 0, 1000);
+	set<string>::const_iterator it;
+	for (it = experiencias.begin(); it != experiencias.end(); ++it) {
+		std::cout << *it << std::endl;
+	}
 }
 
 // Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
