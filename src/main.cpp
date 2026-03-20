@@ -133,14 +133,22 @@ void parte_g()
 // Invocar la operación listarExperiencias(10/12/2023, 0, 1000) para
 //  la turista 4.951.278-9 (Vanesa Castro) e imprimir el resultado en consola (un string
 //  por línea)
-void parte_h()
-{
+void parte_h(){
+	Turista* tur =coleccion_getTurista(49512789);
+	list<string> imprimirExperiencias = tur->listarExperiencias(10/12/2023,0,1000);
+	for (list<string>::iterator it=imprimirExperiencias.begin();it != imprimirExperiencias.end();++it){
+		string codExp= *it;
+		string descExp= coleccion_getExperiencia(codExp)->getDescripcion();
+		cout<< codExp << "(" << descExp << ")" <<endl;
+	}
 }
 
 // Ejecutar la eliminación del objeto TGR3257(Puntos emblematicos) de la clase
 // Experiencia
-void parte_i()
-{
+void parte_i(){
+	Experiencia* borrar =coleccion_getExperiencia(TGR3257);
+	coleccion_eliminarExperiencia(borrar);
+	delete borrar;
 }
 
 // Invocar la operación listarExperiencias(10/10/2020, 0, 1000)
