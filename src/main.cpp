@@ -100,6 +100,9 @@ void parte_c()
 // operación getDT() para cada uno de los objetos Experiencia creados
 void parte_d()
 {
+	for(std::list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); ++it) {
+        std::cout << (*it)->getDT() << std::endl;
+    }
 }
 
 // Crear los siguientes objetos de la clase Turista:
@@ -187,7 +190,10 @@ void parte_j()
 // código que la parte d)
 void parte_k()
 {
-}
+	for(std::list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); ++it) {
+        std::cout << (*it)->getDT() << std::endl;
+    }
+} 
 
 void cleanUp()
 {
