@@ -18,6 +18,9 @@ private:
 public:
     TourGuiado(string codigoReserva, string descripcion, int precioBase, DTFecha fecha, string agencia, set<string> lugaresVisitados);
 
+    void setAgencia(string agencia);
+    void setLugaresVisitados(set<string> lugaresVisitados);
+
     string getAgencia() const;
     set<string> getLugaresVisitados() const;
 

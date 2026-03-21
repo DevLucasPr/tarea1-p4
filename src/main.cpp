@@ -135,6 +135,11 @@ void parte_d()
 // 1.535.442-0, Karen Santos, karen.s89@internet.uy
 void parte_e()
 {
+	Turista* turista1 = new Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	coleccion_guardarTurista(turista1);
+	
+	Turista* turista2 = new Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
+	coleccion_guardarTurista(turista2);
 }
 
 // Imprimir en consola el resultado de ejecutar la operación toString para cada uno
@@ -228,6 +233,12 @@ void parte_i()
 // string por línea)
 void parte_j()
 {
+	Turista* turista = coleccion_getTurista("1.535.442-0");
+	list<string> experiencias = turista->listarExperiencias(DTFecha(10, 10, 2020), 0, 1000);
+	set<string>::const_iterator it;
+	for (it = experiencias.begin(); it != experiencias.end(); ++it) {
+		std::cout << *it << std::endl;
+	}
 }
 
 // Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
