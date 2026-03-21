@@ -6,7 +6,6 @@
 #include "../include/TourGuiado.h"
 #include "../include/Turista.h"
 #include "../include/EventoCultural.h"
-#include "../include/utils.h"
 
 #include <string>
 #include <iostream>
