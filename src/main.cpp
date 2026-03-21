@@ -211,11 +211,10 @@ void parte_h()
 	list<string> imprimirExperiencias = tur->listarExperiencias(fecha, 0, 1000);
 	for (list<string>::iterator it = imprimirExperiencias.begin(); it != imprimirExperiencias.end(); ++it)
 	{
-		string codExp = *it;
-		string descExp = coleccion_getExperiencia(codExp)->getDescripcion();
-		cout << codExp << "(" << descExp << ")" << endl;
+		std::cout << *it << std :: endl;
 	}
 }
+
 
 // Ejecutar la eliminación del objeto TGR3257(Puntos emblematicos) de la clase
 // Experiencia
@@ -241,7 +240,7 @@ void parte_j()
 {
 	Turista *turista = coleccion_getTurista("1.535.442-0");
 	list<string> experiencias = turista->listarExperiencias(DTFecha(10, 10, 2020), 0, 1000);
-	set<string>::const_iterator it;
+	list<string>::const_iterator it;
 	for (it = experiencias.begin(); it != experiencias.end(); ++it)
 	{
 		std::cout << *it << std::endl;
