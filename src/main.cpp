@@ -6,6 +6,7 @@
 #include "../include/TourGuiado.h"
 #include "../include/Turista.h"
 #include "../include/EventoCultural.h"
+#include "../include/utils.h"
 
 #include <string>
 #include <iostream>
@@ -66,13 +67,12 @@ Experiencia *coleccion_getExperiencia(std::string codigoReserva)
 // cantNoches -> 15
 void parte_a()
 {
-	DTFecha f1(18,05,2020);
-	DTFecha f2(10,02,2025);
+	DTFecha f1(18, 05, 2020);
+	DTFecha f2(10, 02, 2025);
 
-	Alojamiento *Aloj = new Alojamiento("ALX5489","Hotel moderno",30,f1,"Hotel Lindorf",AllInclusive,5);
-	Alojamiento *Aloj2 = new Alojamiento("ALJ4789","Todas las habitaciones con vista al mar",100,f2,"Hotel SeaView",MediaPension,15);
+	Alojamiento *Aloj = new Alojamiento("ALX5489", "Hotel moderno", 30, f1, "Hotel Lindorf", AllInclusive, 5);
+	Alojamiento *Aloj2 = new Alojamiento("ALJ4789", "Todas las habitaciones con vista al mar", 100, f2, "Hotel SeaView", MediaPension, 15);
 }
-
 
 // Crear los siguientes objetos de la clase TourGuiado:
 // codigoReserva -> TGO4657
@@ -90,20 +90,19 @@ void parte_a()
 // lugaresVisitados -> Puerta de la Ciudadela, Mausoleo, Cabildo, Palacio Salvo
 void parte_b()
 {
-	DTFecha f3(29,8,2024);
-	DTFecha f4(29,8,2024);
+	DTFecha f3(29, 8, 2024);
+	DTFecha f4(29, 8, 2024);
 	std::set<std::string> lg1;
 	std::set<std::string> lg2;
-	lg1.insert ("Plaza Independencia");
-	lg1.insert ("Plaza Matriz");
+	lg1.insert("Plaza Independencia");
+	lg1.insert("Plaza Matriz");
 	lg2.insert("Puerta de la Ciudadela");
 	lg2.insert("Mausoleo");
 	lg2.insert("Cabildo");
 	lg2.insert("Palacio Salvo");
-	TourGuiado *TG = new TourGuiado("TGO4657","Plazas de Montevideo",10,f3,"Paseos SA",lg1);
-	TourGuiado *TG2 = new TourGuiado("TGR3257","Puntos emblematicos",5,f4,"Recorre",lg2);
+	TourGuiado *TG = new TourGuiado("TGO4657", "Plazas de Montevideo", 10, f3, "Paseos SA", lg1);
+	TourGuiado *TG2 = new TourGuiado("TGR3257", "Puntos emblematicos", 5, f4, "Recorre", lg2);
 }
-
 
 // Crear los siguientes objetos de la clase EventoCultural:
 // codigoReserva -> ECP1346
@@ -114,10 +113,8 @@ void parte_b()
 // usoCupon -> true
 void parte_c()
 {
-	DTFecha f5(29,10,2025);
-	EventoCultural *EC = new EventoCultural("ECP1346","Danza en el Solis",10,f5,"Teatro Solis",true);
-
-
+	DTFecha f5(29, 10, 2025);
+	EventoCultural *EC = new EventoCultural("ECP1346", "Danza en el Solis", 10, f5, "Teatro Solis", true);
 }
 
 // d. Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
@@ -135,10 +132,10 @@ void parte_d()
 // 1.535.442-0, Karen Santos, karen.s89@internet.uy
 void parte_e()
 {
-	Turista* turista1 = new Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	Turista *turista1 = new Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
 	coleccion_guardarTurista(turista1);
-	
-	Turista* turista2 = new Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
+
+	Turista *turista2 = new Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
 	coleccion_guardarTurista(turista2);
 }
 
@@ -233,10 +230,11 @@ void parte_i()
 // string por línea)
 void parte_j()
 {
-	Turista* turista = coleccion_getTurista("1.535.442-0");
+	Turista *turista = coleccion_getTurista("1.535.442-0");
 	list<string> experiencias = turista->listarExperiencias(DTFecha(10, 10, 2020), 0, 1000);
-	set<string>::const_iterator it;
-	for (it = experiencias.begin(); it != experiencias.end(); ++it) {
+	list<string>::const_iterator it;
+	for (it = experiencias.begin(); it != experiencias.end(); ++it)
+	{
 		std::cout << *it << std::endl;
 	}
 }
@@ -254,6 +252,21 @@ void parte_k()
 
 void cleanUp()
 {
+	list<Experiencia *>::iterator iteradorExperiencia;
+	for (iteradorExperiencia = experiencias.begin(); iteradorExperiencia != experiencias.end(); ++iteradorExperiencia)
+	{
+		delete *iteradorExperiencia;
+	}
+	experiencias.clear();
+	map_experiencias.clear();
+
+	list<Turista *>::iterator iteradorTurista;
+	for (iteradorTurista = turistas.begin(); iteradorTurista != turistas.end(); ++iteradorTurista)
+	{
+		delete *iteradorTurista;
+	}
+	turistas.clear();
+	map_turistas.clear();
 }
 
 int main()

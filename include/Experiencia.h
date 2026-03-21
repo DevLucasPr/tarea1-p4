@@ -9,6 +9,8 @@
 #include <string>
 using namespace std;
 
+class Turista;
+
 class Experiencia
 {
 private:
