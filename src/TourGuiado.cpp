@@ -31,5 +31,5 @@ float TourGuiado::calcularCosto()
     int precioBase = this->getPrecioBase();
     int cantidadTuristas = this->getTuristas().size();
     int cantidadLugares = this->lugaresVisitados.size();
-    return (precioBase * 2 * cantidadTuristas * cantidadLugares);
+    return (precioBase * 2) * cantidadTuristas * cantidadLugares);
 }
