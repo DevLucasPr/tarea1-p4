@@ -1,12 +1,13 @@
 #ifndef TURISTA_H
 #define TURISTA_H
 
-#include "../include/Experiencia.h"
 #include "../include/DTFecha.h"
 
 #include <list>
 #include <string>
 using namespace std;
+
+class Experiencia;
 
 class Turista
 {

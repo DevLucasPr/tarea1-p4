@@ -39,7 +39,9 @@ ostream &operator<<(ostream &os, const DTExpe &dt) // Sobrecarga del operador de
     for (it = turistas.begin(); it != turistas.end(); ++it)
     {
         os << *it; // Imprime el nombre del turista
-        if (next(it) != turistas.end()) // si el siguiente no es el ultimo elemento, agrega una coma
+        set<string>::const_iterator siguiente = it;
+        ++siguiente;
+        if (siguiente != turistas.end()) // si el siguiente no es el ultimo elemento, agrega una coma
         {
             os << ",";
         }
