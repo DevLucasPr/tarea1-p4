@@ -71,3 +71,8 @@ list<string> Turista::listarExperiencias(DTFecha desde, float min, float max)
 
     return resultado;
 }
+
+void Turista::eliminarExperiencia(Experiencia *exp)
+{
+    this->experiencias.remove(exp);
+}

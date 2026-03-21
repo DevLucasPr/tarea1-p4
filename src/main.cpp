@@ -100,9 +100,10 @@ void parte_c()
 // operación getDT() para cada uno de los objetos Experiencia creados
 void parte_d()
 {
-	for(std::list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); ++it) {
-        std::cout << (*it)->getDT() << std::endl;
-    }
+	for (std::list<Experiencia *>::iterator it = experiencias.begin(); it != experiencias.end(); ++it)
+	{
+		std::cout << (*it)->getDT() << std::endl;
+	}
 }
 
 // Crear los siguientes objetos de la clase Turista:
@@ -133,24 +134,32 @@ void parte_g()
 // Invocar la operación listarExperiencias(10/12/2023, 0, 1000) para
 //  la turista 4.951.278-9 (Vanesa Castro) e imprimir el resultado en consola (un string
 //  por línea)
-void parte_h(){
-	Turista* tur =coleccion_getTurista(4.951.278-9);
-	list<string> imprimirExperiencias = tur->listarExperiencias(10/12/2023,0,1000);
-	for (list<string>::iterator it=imprimirExperiencias.begin();it != imprimirExperiencias.end();++it){
-		string codExp= *it;
-		string descExp= coleccion_getExperiencia(codExp)->getDescripcion();
-		cout<< codExp << "(" << descExp << ")" <<endl;
+void parte_h()
+{
+	Turista *tur = coleccion_getTurista("4.951.278-9");
+	DTFecha fecha = DTFecha(10, 12, 2023);
+	list<string> imprimirExperiencias = tur->listarExperiencias(fecha, 0, 1000);
+	for (list<string>::iterator it = imprimirExperiencias.begin(); it != imprimirExperiencias.end(); ++it)
+	{
+		string codExp = *it;
+		string descExp = coleccion_getExperiencia(codExp)->getDescripcion();
+		cout << codExp << "(" << descExp << ")" << endl;
 	}
 }
 
 // Ejecutar la eliminación del objeto TGR3257(Puntos emblematicos) de la clase
 // Experiencia
-void parte_i(){
-	Experiencia* borrar =coleccion_getExperiencia(TGR3257);
-	set<Turista*> turistas = borrar->getTuristas();
-	for(set<Turista*>::iterator it=turistas.begin();it != turistas.end();++it){
-		it->experiencias.erase(borrar);
+void parte_i()
+{
+	Experiencia *borrar = coleccion_getExperiencia("TGR3257");
+	set<Turista *> turistas = borrar->getTuristas();
+
+	for (set<Turista *>::iterator it = turistas.begin(); it != turistas.end(); ++it)
+	{
+		Turista *turistaBorrar = *it;
+		turistaBorrar->eliminarExperiencia(borrar);
 	}
+
 	coleccion_eliminarExperiencia(borrar);
 	delete borrar;
 }
@@ -167,10 +176,11 @@ void parte_j()
 // código que la parte d)
 void parte_k()
 {
-	for(std::list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); ++it) {
-        std::cout << (*it)->getDT() << std::endl;
-    }
-} 
+	for (std::list<Experiencia *>::iterator it = experiencias.begin(); it != experiencias.end(); ++it)
+	{
+		std::cout << (*it)->getDT() << std::endl;
+	}
+}
 
 void cleanUp()
 {
