@@ -1,4 +1,5 @@
 #include "../include/Experiencia.h"
+#include "../include/Turista.h"
 
 Experiencia::Experiencia(string codigoReserva, string descripcion, int precioBase, DTFecha fecha)
 {
@@ -79,4 +80,8 @@ DTFecha Experiencia::getFecha() const
 set<Turista *> Experiencia::getTuristas() const
 {
     return this->turistas;
+}
+
+Experiencia::~Experiencia()
+{
 }

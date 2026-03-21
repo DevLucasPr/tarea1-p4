@@ -1,4 +1,5 @@
 #include "../include/Turista.h"
+#include "../include/Experiencia.h"
 
 Turista::Turista(string ci, string nombre, string email)
 {

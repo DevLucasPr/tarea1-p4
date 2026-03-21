@@ -1,34 +1,35 @@
-# Variables
+IDIR = include
+SDIR = src
+ODIR = obj
+
 CXX = g++
-CXXFLAGS = -Wall -Wextra -Iinclude -std=c++17
-SRC_DIR = src
-INC_DIR = include
-OBJ_DIR = obj
+CXXFLAGS = -I$(IDIR) -std=c++98 -Wall -Wextra -pedantic
+
 BIN = main
 
-# Archivos fuente y objetos
-SRCS = $(wildcard $(SRC_DIR)/*.cpp)
-OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
+SRCS = $(wildcard $(SDIR)/*.cpp)
+OBJS = $(patsubst $(SDIR)/%.cpp,$(ODIR)/%.o,$(SRCS))
 
-# Regla principal
+.PHONY: all principal clean valgrind
+
 all: $(BIN)
 
-# Compilación del ejecutable
-$(BIN): $(OBJS)
-	$(CXX) $(OBJS) -o $(BIN)
+principal: $(BIN)
 
-# Compilación de objetos
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
+$(BIN): $(OBJS)
+	$(CXX) $(OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
+
+$(ODIR)/%.o: $(SDIR)/%.cpp | $(ODIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Crear directorio obj si no existe
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
+$(ODIR):
+	mkdir -p $(ODIR)
 
-# Limpiar archivos generados
+entrega:
+	tar -czvf 03_lab0.tar.gz $(SRCS) $(IDIR) Makefile
+
 clean:
-	rm -rf $(OBJ_DIR) $(BIN)
+	rm -rf $(ODIR) $(BIN)
 
-# Valgrind
-valgrind:
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./main
+valgrind: $(BIN)
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(BIN)

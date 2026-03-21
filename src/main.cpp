@@ -170,8 +170,8 @@ void parte_f()
 // 1.535.442-0 (Karen Santos) -> TGR3257 (Puntos emblematicos)
 void parte_g()
 {
-	Turista *vanesa = coleccion_getTurista("49512789");
-	Turista *karen = coleccion_getTurista("15354420");
+	Turista *vanesa = coleccion_getTurista("4.951.278-9");
+	Turista *karen = coleccion_getTurista("1.535.442-0");
 
 	Experiencia *expHotelModerno = coleccion_getExperiencia("ALX5489");
 	Experiencia *expHabVistaMar = coleccion_getExperiencia("ALJ4789");
@@ -240,8 +240,7 @@ void parte_j()
 {
 	Turista *turista = coleccion_getTurista("1.535.442-0");
 	list<string> experiencias = turista->listarExperiencias(DTFecha(10, 10, 2020), 0, 1000);
-	list<string>::const_iterator it;
-	for (it = experiencias.begin(); it != experiencias.end(); ++it)
+	for (list<string>::iterator it = experiencias.begin(); it != experiencias.end(); ++it)
 	{
 		std::cout << *it << std::endl;
 	}
