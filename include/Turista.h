@@ -29,6 +29,7 @@ public:
     void setEmail(string email);
 
     void agregarExperiencia(Experiencia *exp);
+    void eliminarExperiencia(Experiencia *exp);
 
     string toString();
 
