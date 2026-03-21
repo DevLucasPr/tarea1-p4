@@ -71,6 +71,9 @@ void parte_a()
 
 	Alojamiento *Aloj = new Alojamiento("ALX5489","Hotel moderno",30,f1,"Hotel Lindorf",AllInclusive,5);
 	Alojamiento *Aloj2 = new Alojamiento("ALJ4789","Todas las habitaciones con vista al mar",100,f2,"Hotel SeaView",MediaPension,15);
+
+	coleccion_guardarExperiencia(Aloj);
+	coleccion_guardarExperiencia(Aloj2);
 }
 
 
@@ -92,6 +95,7 @@ void parte_b()
 {
 	DTFecha f3(29,8,2024);
 	DTFecha f4(29,8,2024);
+
 	std::set<std::string> lg1;
 	std::set<std::string> lg2;
 	lg1.insert ("Plaza Independencia");
@@ -100,8 +104,12 @@ void parte_b()
 	lg2.insert("Mausoleo");
 	lg2.insert("Cabildo");
 	lg2.insert("Palacio Salvo");
+
 	TourGuiado *TG = new TourGuiado("TGO4657","Plazas de Montevideo",10,f3,"Paseos SA",lg1);
 	TourGuiado *TG2 = new TourGuiado("TGR3257","Puntos emblematicos",5,f4,"Recorre",lg2);
+
+	coleccion_guardarExperiencia(TG);
+	coleccion_guardarExperiencia(TG2);
 }
 
 
@@ -117,7 +125,7 @@ void parte_c()
 	DTFecha f5(29,10,2025);
 	EventoCultural *EC = new EventoCultural("ECP1346","Danza en el Solis",10,f5,"Teatro Solis",true);
 
-
+	coleccion_guardarExperiencia(EC);
 }
 
 // d. Imprimir en consola utilizando la inserción de flujo el resultado de ejecutar la
@@ -235,8 +243,7 @@ void parte_j()
 {
 	Turista* turista = coleccion_getTurista("1.535.442-0");
 	list<string> experiencias = turista->listarExperiencias(DTFecha(10, 10, 2020), 0, 1000);
-	set<string>::const_iterator it;
-	for (it = experiencias.begin(); it != experiencias.end(); ++it) {
+	for (list<string>::iterator it = experiencias.begin(); it != experiencias.end(); ++it) {
 		std::cout << *it << std::endl;
 	}
 }
