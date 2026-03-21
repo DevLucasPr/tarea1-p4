@@ -25,6 +25,9 @@ $(ODIR)/%.o: $(SDIR)/%.cpp | $(ODIR)
 $(ODIR):
 	mkdir -p $(ODIR)
 
+entrega:
+	tar -czvf entrega.tar.gz $(SRCS) $(IDIR) Makefile
+
 clean:
 	rm -rf $(ODIR) $(BIN)
 
