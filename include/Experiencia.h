@@ -3,11 +3,12 @@
 
 #include "../include/DTFecha.h"
 #include "../include/DTExpe.h"
-#include "../include/Turista.h"
 
 #include <set>
 #include <string>
 using namespace std;
+
+class Turista;
 
 class Experiencia
 {
