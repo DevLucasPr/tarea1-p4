@@ -7,23 +7,25 @@ CXXFLAGS = -I$(IDIR) -std=c++98 -Wall -Wextra -pedantic
 
 BIN = main
 
-SRCS = $(wildcard $(SDIR)/*.cpp)
-OBJS = $(patsubst $(SDIR)/%.cpp,$(ODIR)/%.o,$(SRCS))
+SRCS = main.cpp $(wildcard $(SDIR)/*.cpp)
+OBJS = $(ODIR)/main.o $(patsubst $(SDIR)/%.cpp,$(ODIR)/%.o,$(wildcard $(SDIR)/*.cpp))
 
-.PHONY: all principal clean valgrind
+.PHONY: all clean entrega valgrind
 
 all: $(BIN)
 
-principal: $(BIN)
-
 $(BIN): $(OBJS)
-	$(CXX) $(OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+$(ODIR)/%.o: %.cpp | $(ODIR)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(ODIR)/%.o: $(SDIR)/%.cpp | $(ODIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(ODIR):
 	mkdir -p $(ODIR)
+
 
 entrega:
 	tar -czvf 03_lab0.tar.gz $(SRCS) $(IDIR) Makefile
