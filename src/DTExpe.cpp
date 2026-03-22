@@ -32,7 +32,7 @@ ostream &operator<<(ostream &os, const DTExpe &dt) // Sobrecarga del operador de
 {
     os << dt.getCodigoReserva() << "->" << dt.getDescripcion() << "(";
     DTFecha fecha = dt.getFecha();
-    os << fecha.getAnio() << "/" << fecha.getMes() << "/" << fecha.getDia() << ")/"; // Imprime la fecha en formato (año/mes/día)
+    os << fecha.getDia() << "/" << fecha.getMes() << "/" << fecha.getAnio() << ")/"; // Imprime la fecha en formato (año/mes/día)
 
     const set<string> &turistas = dt.getNombreTurista(); // Obtiene el conjunto de nombres de turistas
     set<string>::const_iterator it; // Iterador para recorrer el conjunto de nombres de turistas
